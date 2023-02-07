@@ -42,15 +42,35 @@ ThemeData getApplicationTheme() {
     //elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        textStyle: getRegularStyle(color: ColorManager.white),
+        textStyle: getRegularStyle(
+          color: ColorManager.white,
+        ),
         backgroundColor: ColorManager.primary,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSize.s12),
+          borderRadius: BorderRadius.circular(
+            AppSize.s12,
+          ),
         ),
       ),
     ),
 
     // Text theme
+    textTheme: TextTheme(
+      displayLarge: getSemiBoldStyle(
+        color: ColorManager.darkGrey,
+        fontSize: FontSize.s16,
+      ),
+      titleMedium: getMediumStyle(
+        color: ColorManager.lightGrey,
+        fontSize: FontSize.s14,
+      ),
+      bodySmall: getRegularStyle(
+        color: ColorManager.grey1,
+      ),
+      bodyLarge: getRegularStyle(
+        color: ColorManager.grey,
+      ),
+    ),
 
     // input decoration theme (text form field)
   );
