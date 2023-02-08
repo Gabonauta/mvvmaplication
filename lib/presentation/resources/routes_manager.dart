@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../forgot_password/forgor_password.dart';
 import '../login/login.dart';
+import '../main/main.dart';
 import '../register/register.dart';
 import '../splash/splash.dart';
 import '../store_details/store_details.dart';
@@ -26,6 +27,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const RegisterView());
       case Routes.forgotPasswordRoute:
         return MaterialPageRoute(builder: (_) => const ForgotPasswordView());
+      case Routes.mainRoute:
+        return MaterialPageRoute(builder: (_) => const MainView());
       case Routes.storeDetailsRoute:
         return MaterialPageRoute(builder: (_) => const StoreDetailsView());
       default:
