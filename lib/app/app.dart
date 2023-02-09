@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mvvmaplication/presentation/resources/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
-  MyApp._internal(); //private named constructor
-  int appState = 0;
-  static final MyApp instance = MyApp._internal(); //single instance --singleton
+  const MyApp._internal(); //private named constructor
+
+  static const MyApp instance = MyApp._internal(); //single instance --singleton
 
   factory MyApp() => instance; // factory for the class instance
 
@@ -16,6 +17,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      theme: getApplicationTheme(),
+    );
   }
 }
